@@ -29,45 +29,44 @@
 ## Установка
 1. Склонируйте репозиторий:
    ```bash
-   git clone https://github.com/Tura16/Weather-forecast-SOLAR.git
-   cd Weather-forecast-SOLAR
+    git clone https://github.com/Tura16/Weather-forecast-SOLAR.git
+    cd Weather-forecast-SOLAR
 
 
-  Установите зависимости:
-```bash
+2. Установите зависимости:
 npm install
 
----
 
-Сборка проекта:
-```bash
+
+3. Сборка проекта:
 npm run build
 
 
 
 
-Развертывание
+## Развертывание
 
-Установите gh-pages:
+1. Установите gh-pages:
 npm install gh-pages --save-dev
 
 
-Обновите package.json:
+2. Обновите package.json:
 "scripts": {
     "deploy": "gh-pages -d build"
 }
 
 
-Разверните:
+3. Разверните:
+
 npm run deploy
 
 
-Настройте GitHub Pages:
+4. Настройте GitHub Pages:
 Настройки > Страницы > Установите "Источник" на gh-branch: main.
 
 
 
 
-Доступ
+## Доступ
 Приложение доступно после развертывания:
 https://tura16.github.io/Weather-forecast-SOLAR/.
