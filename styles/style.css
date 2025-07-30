@@ -360,11 +360,13 @@ button:active {
 
 
 .button__search {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     text-align: center;
-    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
     width: 80px;
+    min-width: 80px;
     height: 50px;
     background-color: var(--color-block-light-theme);
     border-radius: var(--border-radius-top);
@@ -433,13 +435,15 @@ button:active {
 }
 
 .save__image {
-    color: gray; 
-    transition: color 0.3s ease;
+    fill: gray; 
+    transition: fill 0.3s ease;
 }
 
 .save__link.saved .save__image {
-    color: white;
+    fill: white;
 }
+
+
 
 .save__link:hover {
     color: var(--color-light-gray);
@@ -615,6 +619,10 @@ button:active {
     }
     .input__search-wrapper-page {
         justify-content: center;
+    }
+
+    .button__search {
+        width: auto;
     }
 
     .weather__information-general {
