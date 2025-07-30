@@ -33,12 +33,14 @@
    cd Weather-forecast-SOLAR
 
 
-Установите зависимости:
+  Установите зависимости:
+```bash
 npm install
 
-
+---
 
 Сборка проекта:
+```bash
 npm run build
 
 
