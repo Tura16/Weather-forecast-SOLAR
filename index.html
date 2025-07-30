@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forecast for Solarlab</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header container">
+        <div class="screen__mode">
+            <div class="history__wrapper">
+                <button type="button" class="history__toggle">Сохраненные места</button>
+                <ul class="history__list hidden">
+                    <li class="history__item"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="input__search-wrapper">
+            <img class="input__search-image" src="./icons/search.png" alt="Иконка поиска" loading="lazy">
+            <input type="text" id="welcome__input-search" class="input__search" placeholder="Найдите нужный вам город...">
+            <ul id="input__list-id" class="input__list hidden"></ul>
+            <button type="button" class="button__search">Искать</button>
+            <button id="welcome__button-location" type="button" class="button__location" aria-label="Текущее местоположение">
+            <img class="location__icon" src="./icons/location_icon.png" alt="Иконка локации" loading="lazy">
+            </button>
+        </div>
+    </header>
+    <main class="main container">
+        <section class="welcome__screen" id="welcome-screen-id">
+            <img class="logo" src="./icons/Logo.png" alt="Иконка погоды" width="120" height="120" loading="lazy">
+            <div class="loader hidden"></div>
+            <h1 class="welcome__title">
+                <span>Г</span><span>д</span><span>е</span><span> </span>
+                <span>т</span><span>ы</span><span> </span>
+                <span>х</span><span>о</span><span>ч</span><span>е</span><span>ш</span><span>ь</span><span> </span>
+                <span>у</span><span>з</span><span>н</span><span>а</span><span>т</span><span>ь</span><span> </span>
+                <span>п</span><span>о</span><span>г</span><span>о</span><span>д</span><span>у</span><span>?</span>
+            </h1>
+        </section>
+        <section class="header__search hidden">
+            <div class="save">
+                <a href="#" class="save__link saved">
+                    <svg class="save__image" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                        <path d="M 12.8125 2 C 12.335938 2.089844 11.992188 2.511719 12 3 L 12 47 C 11.996094 47.359375 12.1875 47.691406 12.496094 47.871094 C 12.804688 48.054688 13.1875 48.054688 13.5 47.875 L 25 41.15625 L 36.5 47.875 C 36.8125 48.054688 37.195313 48.054688 37.503906 47.871094 C 37.8125 47.691406 38.003906 47.359375 38 47 L 38 3 C 38 2.449219 37.550781 2 37 2 L 13 2 C 12.96875 2 12.9375 2 12.90625 2 C 12.875 2 12.84375 2 12.8125 2 Z M 14 4 L 36 4 L 36 45.25 L 25.5 39.125 C 25.191406 38.945313 24.808594 38.945313 24.5 39.125 L 14 45.25 Z" fill="currentColor">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <section class="information">
+                <div class="weather__information-location">
+                    <h2 class="weather__information-city"></h2>
+                    <h3 class="weather__information-time"></h3>
+                    <h4 class="weather__information-date"></h4>
+                </div>
+                <div class="weather__information-general">
+                    <div class="general__block1">
+                        <h2 class="temperature__title"></h2>
+                        <p class="temperature__desc">Ощущается как:  </p>
+                        <div class="sunrise">
+                            <img class="sunrise__image" src="./images/sunrise-white.png" alt="sunrise" width="48" height="48" loading="lazy">
+                            <h3 class="time__sunrise-title">Восход</h3>
+                            <p class="time__sunrise-desc"></p>
+                        </div>
+                        <div class="sunset">
+                            <img class="sunset__image" src="./images/sunset-white.png" alt="sunset" width="48" height="48" loading="lazy">
+                            <h3 class="time__sunset-title">Закат</h3>
+                            <p class="time__sunset-desc"></p>
+                        </div>
+                    </div>
+                    <div class="general__block2">
+                        <img class="weather__icon" src="#" alt="Иконка погоды" loading="lazy">
+                        <h2 class="weather__text"></h2>
+                    </div>
+                    <div class="general__block3">
+                        <img class="humidity__image" src="./images/humidity.png" alt="картинка влажность" width="30" height="30" loading="lazy">
+                        <h3 class="indicator">Влажность</h3>
+                        <p class="indicator__inf humidity"></p>
+                        <img class="wind__image" src="./images/wind.png" alt="картинка скорость ветра" width="30" height="30" loading="lazy">
+                        <h3 class="indicator">Скорость ветра</h3>
+                        <p class="indicator__inf wind"></p>
+                        <img class="pressure__image" src="./images/pressure-white.png" alt="картинка давление" width="30" height="30" loading="lazy">
+                        <h3 class="indicator">Давление</h3>
+                        <p class="indicator__inf pressure"></p>
+                    </div>
+                </div>
+            </section>
+            <div id="map" class="map"></div>
+        </section>
+    </main>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d6c077ad-c55b-41b4-9553-ebcd9dbf0487&lang=ru_RU" defer></script>
+    <script type="module" src="./JS/main.js"></script>
+</body>
+</html>
+
+
