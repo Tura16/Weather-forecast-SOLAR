@@ -90,6 +90,10 @@ body {
     background: var(--background);
 }
 
+a {
+    color: var(--color-black);
+}
+
 button {
     transition: var(--transition);
 }
