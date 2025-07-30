@@ -133,6 +133,7 @@ button:active {
     text-align: center;
     align-items: center;
     margin-top: 230px;
+    min-height: 30vh;
 }
 
 .history__wrapper {
@@ -373,6 +374,7 @@ button:active {
     min-width: 80px;
     height: 50px;
     background-color: var(--color-block-light-theme);
+    color: var(--color-black);
     border-radius: var(--border-radius-top);
     cursor: pointer;
 }
